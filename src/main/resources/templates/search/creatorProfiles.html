@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Creator search result</title>
+</head>
+<body>
+    <h2>Creator search results.</h2>
+    <table border="1">
+        <tr>
+            <td></td>
+            <td>Creator</td>
+            <td>Description</td>
+        </tr>
+        <tr th:each="profile : ${profiles}" >
+            <td><img th:src="${profile.url}"  alt="profile"  width="50px"/></td>
+            <td th:text="${profile.title}"></td>
+            <td th:text="${profile.description}"></td>
+        </tr>
+    </table>
+</body>
+</html>
