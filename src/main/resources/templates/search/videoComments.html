@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Comments search result</title>
+</head>
+<body>
+<h2>Comments search results.</h2>
+<table border="1">
+  <tr>
+    <td></td>
+    <td>Author</td>
+    <td>Comment</td>
+  </tr>
+  <tr th:each="comment : ${comments}" >
+    <td><img th:src="${comment.url}"  alt="profile"  width="50px"/></td>
+    <td th:text="${comment.author}"></td>
+    <td th:text="${comment.comment}"></td>
+  </tr>
+</table>
+</body>
+</html>
