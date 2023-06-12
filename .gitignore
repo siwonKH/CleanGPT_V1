@@ -1,3 +1,11 @@
+application.properties
+.firebaserc
+.firebase
+database.rules.json
+firebase.json
+firebase-debug.log
+.github
+
 HELP.md
 .gradle
 build/
