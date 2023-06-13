@@ -6,6 +6,9 @@
   maximum-scale=1.0, minimum-scale=1.0">
   <title>Title</title>
   <link href="../static/css/output.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.2/dist/cdn.min.js"></script>
+<!--  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />-->
+
 </head>
 <body>
   <div class="flex justify-center">
@@ -18,7 +21,7 @@
             </div>
             <div class="w-3/4">
               <div>
-                <h5 class="text-sm text-stone-700">귀찮음 끝, 프리미엄 시작 | 내 맘처럼 무한 추천해주는 YouTube Music</h5>
+                <h5 class="text-sm text-stone-700 line-clamp-2">귀찮음 끝, 프리미엄 시작 | 내 맘처럼 무한 추천해주는 YouTube Music</h5>
               </div>
             </div>
           </div>
@@ -26,7 +29,7 @@
       </div>
       <div class="flex justify-between py-2">
         <div class="flex items-center space-x-2">
-          <span class="text-lg font-bold">Comments</span>
+          <span class="text-xl font-bold">Comments</span>
           <span class="text-sm text-stone-500">126</span>
         </div>
         <div class="py-1 px-3.5 rounded-full bg-white cursor-pointer">
@@ -35,90 +38,134 @@
           </svg>
         </div>
       </div>
-      <div class="comment-list divide-y border-t h-full">
-        <div class="comment-item flex space-x-2 pt-3 pb-5">
+      <div class="comment-list divide-y border-t h-full w-full">
+        <div class="comment-item flex space-x-2 pt-3 pb-4">
           <div class="w-1/6">
             <img class="rounded-full" src="https://yt3.ggpht.com/ytc/AGIKgqOprUh0wZXD9jGL_W96CHKmDfD1jxjMJx4KvSZtVVFLdeAdMQUJT75THFKLul-z=s48-c-k-c0x00ffffff-no-rj" alt="prf" />
           </div>
-          <div class="w-5/6 space-y-2 text-left">
+          <div class="w-5/6 space-y-1 text-left">
             <h5 class="font-bold text-xs truncate text-ellipsis">Krisan dany</h5>
-            <pre class="text-sm whitespace-pre-line">안녕하세요ㅁㅇㄴㄹㄹㅈㄷㄹㄹㅇㄴㄹㅇㅁㄹㄴㄹㄴㄹㅇㄹㅇㅁㅇㄴㄹㄴㅇㅁㄹㄴㄹ
-dsfsddfsdjflfj
-sadfasfwewefww</pre>
+            <span class="text-sm pr-1 whitespace-pre-line break-words line-clamp-5">안녕하세요</span>
           </div>
         </div>
-        <div class="comment-item flex space-x-2 pt-3 pb-5">
+        <div class="comment-item flex space-x-2 pt-3 pb-4">
           <div class="w-1/6">
             <img class="rounded-full" src="https://yt3.ggpht.com/ytc/AGIKgqOprUh0wZXD9jGL_W96CHKmDfD1jxjMJx4KvSZtVVFLdeAdMQUJT75THFKLul-z=s48-c-k-c0x00ffffff-no-rj" alt="prf" />
           </div>
-          <div class="w-5/6 space-y-2 text-left">
-            <p class="font-bold text-xs">Krisan dany</p>
-            <pre class="text-sm">안녕하세요
-dsfsdf
-dfsdjflfj
-sadfasfwewefww</pre>
+          <div class="w-5/6 space-y-1 text-left">
+            <h5 class="font-bold text-xs truncate text-ellipsis">Krisan dany</h5>
+            <div class="text-sm pr-1 whitespace-pre-line break-words line-clamp-5">Hey everyone!
+              It's almost 2022       and we still don't know if there       is aliens living among us, or do we? Maybe the person writing this is an alien.
+              You will never know.</div>
           </div>
         </div>
-        <div class="comment-item flex space-x-2 pt-3 pb-5">
+        <div class="comment-item flex space-x-2 pt-3 pb-4">
           <div class="w-1/6">
             <img class="rounded-full" src="https://yt3.ggpht.com/ytc/AGIKgqOprUh0wZXD9jGL_W96CHKmDfD1jxjMJx4KvSZtVVFLdeAdMQUJT75THFKLul-z=s48-c-k-c0x00ffffff-no-rj" alt="prf" />
           </div>
-          <div class="w-5/6 space-y-2 text-left">
-            <p class="font-bold text-xs">Krisan dany</p>
-            <pre class="text-sm">안녕하세요
-dsfsdf
-dfsdjflfj
-sadfasfwewefww</pre>
+          <div class="w-5/6 space-y-1 text-left">
+            <h5 class="font-bold text-xs truncate text-ellipsis">Krisan dany</h5>
+            <span class="text-sm pr-1 whitespace-pre-line break-words line-clamp-5">I am qwertyuioplkjhgfdsazxcvbnmpoiuytrewqasdfghjkl</span>
           </div>
         </div>
-        <div class="comment-item flex space-x-2 pt-3 pb-5">
+        <div class="comment-item flex space-x-2 pt-3 pb-4">
           <div class="w-1/6">
             <img class="rounded-full" src="https://yt3.ggpht.com/ytc/AGIKgqOprUh0wZXD9jGL_W96CHKmDfD1jxjMJx4KvSZtVVFLdeAdMQUJT75THFKLul-z=s48-c-k-c0x00ffffff-no-rj" alt="prf" />
           </div>
-          <div class="w-5/6 space-y-2 text-left">
-            <p class="font-bold text-xs">Krisan dany</p>
-            <pre class="text-sm">안녕하세요
-dsfsdf
-dfsdjflfj
-sadfasfwewefww</pre>
+          <div class="w-5/6 space-y-1 text-left">
+            <h5 class="font-bold text-xs truncate text-ellipsis">Krisan dany</h5>
+            <span class="text-sm pr-1 whitespace-pre-line break-words line-clamp-5">I am qwertyuioplkjhgfdsazxcvbnmpoiuytrewqasdfghjkl</span>
           </div>
         </div>
-        <div class="comment-item flex space-x-2 pt-3 pb-5">
+        <div class="comment-item flex space-x-2 pt-3 pb-4">
           <div class="w-1/6">
             <img class="rounded-full" src="https://yt3.ggpht.com/ytc/AGIKgqOprUh0wZXD9jGL_W96CHKmDfD1jxjMJx4KvSZtVVFLdeAdMQUJT75THFKLul-z=s48-c-k-c0x00ffffff-no-rj" alt="prf" />
           </div>
-          <div class="w-5/6 space-y-2 text-left">
-            <p class="font-bold text-xs">Krisan dany</p>
-            <pre class="text-sm">안녕하세요
-dsfsdf
-dfsdjflfj
-sadfasfwewefww</pre>
+          <div class="w-5/6 space-y-1 text-left">
+            <h5 class="font-bold text-xs truncate text-ellipsis">Krisan dany</h5>
+            <span class="text-sm pr-1 whitespace-pre-line break-words line-clamp-5">I am qwertyuioplkjhgfdsazxcvbnmpoiuytrewqasdfghjkl</span>
           </div>
         </div>
-        <div class="comment-item flex space-x-2 pt-3 pb-5">
+        <div class="comment-item flex space-x-2 pt-3 pb-4">
           <div class="w-1/6">
             <img class="rounded-full" src="https://yt3.ggpht.com/ytc/AGIKgqOprUh0wZXD9jGL_W96CHKmDfD1jxjMJx4KvSZtVVFLdeAdMQUJT75THFKLul-z=s48-c-k-c0x00ffffff-no-rj" alt="prf" />
           </div>
-          <div class="w-5/6 space-y-2 text-left">
-            <p class="font-bold text-xs">Krisan dany</p>
-            <pre class="text-sm">안녕하세요
-dsfsdf
-dfsdjflfj
-sadfasfwewefww</pre>
+          <div class="w-5/6 space-y-1 text-left">
+            <h5 class="font-bold text-xs truncate text-ellipsis">Krisan dany</h5>
+            <span class="text-sm pr-1 whitespace-pre-line break-words line-clamp-5">I am qwertyuioplkjhgfdsazxcvbnmpoiuytrewqasdfghjkl</span>
+          </div>
+        </div>
+        <div class="comment-item flex space-x-2 pt-3 pb-4">
+          <div class="w-1/6">
+            <img class="rounded-full" src="https://yt3.ggpht.com/ytc/AGIKgqOprUh0wZXD9jGL_W96CHKmDfD1jxjMJx4KvSZtVVFLdeAdMQUJT75THFKLul-z=s48-c-k-c0x00ffffff-no-rj" alt="prf" />
+          </div>
+          <div class="w-5/6 space-y-1 text-left">
+            <h5 class="font-bold text-xs truncate text-ellipsis">Krisan dany</h5>
+            <span class="text-sm pr-1 whitespace-pre-line break-words line-clamp-5">I am qwertyuioplkjhgfdsazxcvbnmpoiuytrewqasdfghjkl</span>
+          </div>
+        </div>
+        <div class="comment-item flex space-x-2 pt-3 pb-4">
+          <div class="w-1/6">
+            <img class="rounded-full" src="https://yt3.ggpht.com/ytc/AGIKgqOprUh0wZXD9jGL_W96CHKmDfD1jxjMJx4KvSZtVVFLdeAdMQUJT75THFKLul-z=s48-c-k-c0x00ffffff-no-rj" alt="prf" />
+          </div>
+          <div class="w-5/6 space-y-1 text-left">
+            <h5 class="font-bold text-xs truncate text-ellipsis">Krisan dany</h5>
+            <span class="text-sm pr-1 whitespace-pre-line break-words line-clamp-5">I am qwertyuioplkjhgfdsazxcvbnmpoiuytrewqasdfghjkl</span>
           </div>
         </div>
 
       </div>
       <div class="sticky pb-4 w-full bottom-0">
         <div class="flex justify-end">
-          <div class="rounded-full p-5 bg-violet-600 text-white drop-shadow-lg cursor-pointer">
-            <svg class="w-6 stroke-white fill-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>
+          <div class="rounded-full p-5 bg-violet-600 text-white drop-shadow-lg cursor-pointer" data-drawer-target="drawer-bottom-example" data-drawer-show="drawer-bottom-example" data-drawer-placement="bottom" aria-controls="drawer-bottom-example">
+<!--            <svg class="w-6 stroke-white fill-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">-->
+<!--              <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>-->
+<!--            </svg>-->
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M2 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
             </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- drawer component -->
+      <div id="drawer-bottom-example" class="fixed bottom-0 left-0 right-0 z-40 w-full rounded-t-2xl overflow-y-auto transition-transform bg-white transform-none" tabindex="-1" aria-labelledby="drawer-bottom-label">
+        <div class="absolute top-1.5 w-full">
+          <div class="flex justify-center">
+            <div class="border-2 border-stone-300 rounded-full w-10 h-1"></div>
+          </div>
+        </div>
+        <div class="p-4">
+          <div class="flex justify-between px-2 pt-2">
+            <h5 id="drawer-bottom-label" class="inline-flex items-center mb-4 text-2xl font-bold text-gray-800">Filter</h5>
+            <button type="button" data-drawer-hide="drawer-bottom-example" aria-controls="drawer-bottom-example" class="text-gray-400 bg-transparent rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center" >
+              <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+              <span class="sr-only">Close menu</span>
+            </button>
+          </div>
+          <div class="space-y-5 p-2">
+            <div class="flex justify-between">
+              <span class="font-bold">Spam</span>
+              <label>
+                <input class="w-6 h-6 text-violet-500 bg-gray-50 border-gray-300 rounded" type="checkbox" />
+              </label>
+            </div>
+            <div class="flex justify-between">
+              <span class="font-bold">Abuse</span>
+              <label>
+                <input class="w-6 h-6 text-violet-500 bg-gray-50 border-gray-300 rounded" type="checkbox" />
+              </label>
+            </div>
+            <div class="flex justify-between">
+              <label for="check3" class="font-bold">Hate speech</label>
+              <input checked  id="check3" value="" class="w-6 h-6 text-violet-500 bg-gray-50 border-gray-300 rounded focus:ring-violet-500 focus:ring-2" type="checkbox" />
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+  <script src="../static/js/bottomSheet.js"></script>
 </body>
 </html>
