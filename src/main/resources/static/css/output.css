@@ -605,6 +605,10 @@ video {
   margin-bottom: calc(10rem * var(--tw-space-y-reverse));
 }
 
+.justify-self-center {
+  justify-self: center;
+}
+
 .rounded-lg {
   border-radius: 0.5rem;
 }
@@ -654,6 +658,10 @@ video {
 
 .pl-14 {
   padding-left: 3.5rem;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .text-3xl {
