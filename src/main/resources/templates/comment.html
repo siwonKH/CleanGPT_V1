@@ -6,9 +6,6 @@
   maximum-scale=1.0, minimum-scale=1.0">
   <title>Title</title>
   <link href="../static/css/output.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.2/dist/cdn.min.js"></script>
-<!--  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />-->
-
 </head>
 <body>
   <div class="flex justify-center">
@@ -32,7 +29,7 @@
           <span class="text-xl font-bold">Comments</span>
           <span class="text-sm text-stone-500">126</span>
         </div>
-        <div class="py-1 px-3.5 rounded-full bg-white cursor-pointer">
+        <div id="filter-drawer-button" class="py-1 px-3.5 rounded-full bg-white cursor-pointer" type="button" data-drawer-target="filter-drawer" data-drawer-show="filter-drawer" data-drawer-placement="bottom" aria-controls="filter-drawer">
           <svg class="w-7 stroke-1 stroke-stone-500 fill-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>
           </svg>
@@ -117,7 +114,7 @@
       </div>
       <div class="sticky pb-4 w-full bottom-0">
         <div class="flex justify-end">
-          <div class="rounded-full p-5 bg-violet-600 text-white drop-shadow-lg cursor-pointer" data-drawer-target="drawer-bottom-example" data-drawer-show="drawer-bottom-example" data-drawer-placement="bottom" aria-controls="drawer-bottom-example">
+          <div class="rounded-full p-5 bg-violet-600 text-white drop-shadow-lg cursor-pointer" data-drawer-target="custom-filter-drawer" data-drawer-show="custom-filter-drawer" data-drawer-placement="bottom" aria-controls="custom-filter-drawer">
 <!--            <svg class="w-6 stroke-white fill-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">-->
 <!--              <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>-->
 <!--            </svg>-->
@@ -129,43 +126,58 @@
       </div>
 
       <!-- drawer component -->
-      <div id="drawer-bottom-example" class="fixed bottom-0 left-0 right-0 z-40 w-full rounded-t-2xl overflow-y-auto transition-transform bg-white transform-none" tabindex="-1" aria-labelledby="drawer-bottom-label">
+      <div id="filter-drawer" class="fixed bottom-0 left-0 right-0 z-40 w-full rounded-t-2xl overflow-y-auto transition duration-300 bg-white translate-y-full" tabindex="-1" aria-labelledby="filter-drawer-label">
         <div class="absolute top-1.5 w-full">
           <div class="flex justify-center">
             <div class="border-2 border-stone-300 rounded-full w-10 h-1"></div>
           </div>
         </div>
         <div class="p-4">
-          <div class="flex justify-between px-2 pt-2">
-            <h5 id="drawer-bottom-label" class="inline-flex items-center mb-4 text-2xl font-bold text-gray-800">Filter</h5>
-            <button type="button" data-drawer-hide="drawer-bottom-example" aria-controls="drawer-bottom-example" class="text-gray-400 bg-transparent rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center" >
-              <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+          <div class="flex justify-between items-start px-2 pt-2">
+            <h5 id="filter-drawer-label" class="items-center mb-4 text-2xl font-bold text-gray-800">Filter</h5>
+            <button id="filter-drawer-closer" type="button" data-drawer-hide="filter-drawer" aria-controls="filter-drawer" class="text-gray-400 bg-transparent rounded-lg text-sm p-1.5 absolute top-5 right-3.5 inline-flex items-center" >
+              <svg aria-hidden="true" class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
               <span class="sr-only">Close menu</span>
             </button>
           </div>
-          <div class="space-y-5 p-2">
-            <div class="flex justify-between">
-              <span class="font-bold">Spam</span>
-              <label>
-                <input class="w-6 h-6 text-violet-500 bg-gray-50 border-gray-300 rounded" type="checkbox" />
-              </label>
+          <div class="space-y-2 p-2 pb-5">
+            <div class="flex justify-between items-center p-2 rounded transition-colors duration-300 ease-in-out hover:bg-gray-100">
+              <label for="check1" class="w-full text-base">Spam</label>
+              <input id="check1" class="w-5 h-5 text-violet-500 bg-gray-100 border-gray-300 rounded focus:ring-violet-500 focus:ring-2" type="checkbox" />
             </div>
-            <div class="flex justify-between">
-              <span class="font-bold">Abuse</span>
-              <label>
-                <input class="w-6 h-6 text-violet-500 bg-gray-50 border-gray-300 rounded" type="checkbox" />
-              </label>
+            <div class="flex justify-between items-center p-2 rounded transition-colors duration-300 ease-in-out hover:bg-gray-100">
+              <label for="check2" class="w-full text-lg">Abuse</label>
+              <input id="check2" class="w-5 h-5 text-violet-500 bg-gray-100 border-gray-300 rounded focus:ring-violet-500 focus:ring-2" type="checkbox" />
             </div>
-            <div class="flex justify-between">
-              <label for="check3" class="font-bold">Hate speech</label>
-              <input checked  id="check3" value="" class="w-6 h-6 text-violet-500 bg-gray-50 border-gray-300 rounded focus:ring-violet-500 focus:ring-2" type="checkbox" />
+            <div class="flex justify-between items-center p-2 rounded transition-colors duration-300 ease-in-out hover:bg-gray-100">
+              <label for="check3" class="w-full text-lg">Hate speech</label>
+              <input id="check3" class="w-5 h-5 text-violet-500 bg-gray-100 border-gray-300 rounded focus:ring-violet-500 focus:ring-2" type="checkbox" />
             </div>
           </div>
         </div>
       </div>
+      <!-- drawer component -->
+      <div id="custom-filter-drawer" class="fixed bottom-0 left-0 right-0 z-40 w-full rounded-t-2xl overflow-y-auto transition duration-300 bg-white translate-y-full" tabindex="-1" aria-labelledby="filter-drawer-label">
+        <div class="absolute top-1.5 w-full">
+          <div class="flex justify-center">
+            <div class="border-2 border-stone-300 rounded-full w-10 h-1"></div>
+          </div>
+        </div>
+        <div class="p-4">
+          <div class="flex justify-between items-start px-2 pt-2">
+            <h5 id="custom-filter-drawer-label" class="mb-4 text-2xl font-bold text-gray-800">Custom Filter</h5>
+            <button id="custom-filter-drawer-closer" type="button" data-drawer-hide="custom-filter-drawer" aria-controls="custom-filter-drawer" class="text-gray-400 bg-transparent rounded-lg text-sm p-1.5 absolute top-5 right-3.5 inline-flex items-center" >
+              <svg aria-hidden="true" class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+              <span class="sr-only">Close menu</span>
+            </button>
+          </div>
+          <div>hi</div>
+        </div>
+      </div>
+
     </div>
   </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
-  <script src="../static/js/bottomSheet.js"></script>
+  <script src="../../../../node_modules/flowbite/dist/flowbite.min.js"></script>
+<!--  <script src="../static/js/flowbite.min.js"></script>-->
 </body>
 </html>
