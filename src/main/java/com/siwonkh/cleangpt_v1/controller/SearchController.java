@@ -61,7 +61,7 @@ public class SearchController {
             creatorProfiles.add(creatorProfile);
         }
         model.addAttribute("profiles", creatorProfiles);
-        return "search/creatorProfiles";
+        return "searchResult";
     }
 
     @GetMapping("search/comment")
