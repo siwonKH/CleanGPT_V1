@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no,
@@ -33,187 +33,26 @@
 
       <div class="mb-8">
         <div class="video-list space-y-3 overflow-y-scroll">
-          <div class="video-item">
-            <a href="#">
+          <div class="video-item" th:each="video : ${videos}">
+            <a th:href="|/search/comment?video=${video.videoId}&title=${video.title}&thumbnail=${video.thumbnail}|">
               <div class="flex space-x-2">
                 <div class="w-1/2 rounded-lg">
-                  <img class="rounded-lg" src="https://i.ytimg.com/vi/EnccIUtjLvo/maxresdefault.jpg" alt="thumbnail" />
+                  <img class="rounded-lg" th:src="${video.thumbnail}" alt="thumbnail" />
                 </div>
-                <div class="w-1/2">
+                <div class="flex flex-col justify-between w-1/2">
                   <div>
-                    <h5 class="text-sm">귀찮음 끝, 프리미엄 시작 | 내 맘처럼 무한 추천해주는 YouTube Music</h5>
+                    <h5 class="text-sm" th:text="${video.title}">귀찮음 끝, 프리미엄 시작 | 내 맘처럼 무한 추천해주는 YouTube Music</h5>
                   </div>
                   <div>
-                    <p class="text-xs text-stone-500">조회수 10만회</p>
+                    <p class="text-xs text-stone-500 truncate text-ellipsis" th:text="${video.description}">조회수 10만회</p>
                   </div>
                   <div>
-                    <p class="text-xs text-stone-500">. 3개월 전</p>
+                    <p class="pb-1.5 text-xs text-stone-500" th:text="${video.publishedAt}"></p>
                   </div>
                 </div>
               </div>
             </a>
           </div>
-          <div class="video-item">
-            <a href="#">
-              <div class="flex space-x-2">
-                <div class="w-1/2 rounded-lg">
-                  <img class="rounded-lg" src="https://i.ytimg.com/vi/EnccIUtjLvo/maxresdefault.jpg" alt="thumbnail" />
-                </div>
-                <div class="w-1/2">
-                  <div>
-                    <h5 class="text-sm">귀찮음 끝, 프리미엄 시작 | 내 맘처럼 무한 추천해주는 YouTube Music</h5>
-                  </div>
-                  <div>
-                    <p class="text-xs text-stone-500">조회수 10만회</p>
-                  </div>
-                  <div>
-                    <p class="text-xs text-stone-500">. 3개월 전</p>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="video-item">
-            <a href="#">
-              <div class="flex space-x-2">
-                <div class="w-1/2 rounded-lg">
-                  <img class="rounded-lg" src="https://i.ytimg.com/vi/EnccIUtjLvo/maxresdefault.jpg" alt="thumbnail" />
-                </div>
-                <div class="w-1/2">
-                  <div>
-                    <h5 class="text-sm">귀찮음 끝, 프리미엄 시작 | 내 맘처럼 무한 추천해주는 YouTube Music</h5>
-                  </div>
-                  <div>
-                    <p class="text-xs text-stone-500">조회수 10만회</p>
-                  </div>
-                  <div>
-                    <p class="text-xs text-stone-500">. 3개월 전</p>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="video-item">
-            <a href="#">
-              <div class="flex space-x-2">
-                <div class="w-1/2 rounded-lg">
-                  <img class="rounded-lg" src="https://i.ytimg.com/vi/EnccIUtjLvo/maxresdefault.jpg" alt="thumbnail" />
-                </div>
-                <div class="w-1/2">
-                  <div>
-                    <h5 class="text-sm">귀찮음 끝, 프리미엄 시작 | 내 맘처럼 무한 추천해주는 YouTube Music</h5>
-                  </div>
-                  <div>
-                    <p class="text-xs text-stone-500">조회수 10만회</p>
-                  </div>
-                  <div>
-                    <p class="text-xs text-stone-500">. 3개월 전</p>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="video-item">
-            <a href="#">
-              <div class="flex space-x-2">
-                <div class="w-1/2 rounded-lg">
-                  <img class="rounded-lg" src="https://i.ytimg.com/vi/EnccIUtjLvo/maxresdefault.jpg" alt="thumbnail" />
-                </div>
-                <div class="w-1/2">
-                  <div>
-                    <h5 class="text-sm">귀찮음 끝, 프리미엄 시작 | 내 맘처럼 무한 추천해주는 YouTube Music</h5>
-                  </div>
-                  <div>
-                    <p class="text-xs text-stone-500">조회수 10만회</p>
-                  </div>
-                  <div>
-                    <p class="text-xs text-stone-500">. 3개월 전</p>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="video-item">
-            <a href="#">
-              <div class="flex space-x-2">
-                <div class="w-1/2 rounded-lg">
-                  <img class="rounded-lg" src="https://i.ytimg.com/vi/EnccIUtjLvo/maxresdefault.jpg" alt="thumbnail" />
-                </div>
-                <div class="w-1/2">
-                  <div>
-                    <h5 class="text-sm">귀찮음 끝, 프리미엄 시작 | 내 맘처럼 무한 추천해주는 YouTube Music</h5>
-                  </div>
-                  <div>
-                    <p class="text-xs text-stone-500">조회수 10만회</p>
-                  </div>
-                  <div>
-                    <p class="text-xs text-stone-500">. 3개월 전</p>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="video-item">
-            <a href="#">
-              <div class="flex space-x-2">
-                <div class="w-1/2 rounded-lg">
-                  <img class="rounded-lg" src="https://i.ytimg.com/vi/EnccIUtjLvo/maxresdefault.jpg" alt="thumbnail" />
-                </div>
-                <div class="w-1/2">
-                  <div>
-                    <h5 class="text-sm">귀찮음 끝, 프리미엄 시작 | 내 맘처럼 무한 추천해주는 YouTube Music</h5>
-                  </div>
-                  <div>
-                    <p class="text-xs text-stone-500">조회수 10만회</p>
-                  </div>
-                  <div>
-                    <p class="text-xs text-stone-500">. 3개월 전</p>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="video-item">
-            <a href="#">
-              <div class="flex space-x-2">
-                <div class="w-1/2 rounded-lg">
-                  <img class="rounded-lg" src="https://i.ytimg.com/vi/EnccIUtjLvo/maxresdefault.jpg" alt="thumbnail" />
-                </div>
-                <div class="w-1/2">
-                  <div>
-                    <h5 class="text-sm">귀찮음 끝, 프리미엄 시작 | 내 맘처럼 무한 추천해주는 YouTube Music</h5>
-                  </div>
-                  <div>
-                    <p class="text-xs text-stone-500">조회수 10만회</p>
-                  </div>
-                  <div>
-                    <p class="text-xs text-stone-500">. 3개월 전</p>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="video-item">
-            <a href="#">
-              <div class="flex space-x-2">
-                <div class="w-1/2 rounded-lg">
-                  <img class="rounded-lg" src="https://i.ytimg.com/vi/EnccIUtjLvo/maxresdefault.jpg" alt="thumbnail" />
-                </div>
-                <div class="w-1/2">
-                  <div>
-                    <h5 class="text-sm">귀찮음 끝, 프리미엄 시작 | 내 맘처럼 무한 추천해주는 YouTube Music</h5>
-                  </div>
-                  <div>
-                    <p class="text-xs text-stone-500">조회수 10만회</p>
-                  </div>
-                  <div>
-                    <p class="text-xs text-stone-500">. 3개월 전</p>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-
         </div>
       </div>
     </div>
