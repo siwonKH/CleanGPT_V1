@@ -21,6 +21,7 @@ public class SearchCommentThread {
         String urlStr = BASE_URL + "?part=snippet";
         urlStr += "&key=" + APIKey;
         urlStr += "&videoId=" + video;
+        urlStr += "&maxResults=" + "100";
         this.url = urlStr;
     }
 
