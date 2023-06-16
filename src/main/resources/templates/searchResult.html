@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no,
@@ -16,26 +16,25 @@
     <div class="my-20 w-full h-16">
       <div class="flex">
         <div class="w-1/5">
-          <img src="https://img.freepik.com/premium-vector/red-youtube-logo-social-media-logo_197792-1803.jpg?w=2000"  alt="logo"/>
+          <img th:src="${profile.url}" alt="logo"/>
         </div>
-        <div>
+        <div class="w-4/5">
           <div class="pl-2">
-            <h5 class="font-bold">Youtube Korea</h5>
+            <h5 class="font-bold truncate text-ellipsis" th:text="${profile.title}"></h5>
           </div>
           <div class="flex space-x-2 pl-2">
-            <p class="text-xs">@youtubekorea</p>
-            <p class="text-xs text-stone-500">119k subscribers</p>
+            <p class="text-xs text-stone-500" >채널 개설일: <span th:text="${profile.publishedAt}"></span></p>
           </div>
           <div class="pl-2">
-            <p class="text-xs text-stone-500">Youtube Korea 공식 채널에서는 다양한..</p>
+            <p class="text-xs text-stone-500 truncate text-ellipsis" th:text="${profile.description}"></p>
           </div>
         </div>
       </div>
     </div>
     <div class="my-20 w-full flex justify-center">
-      <div class="flex flex-col justify-center w-4/5">
-        <button class="rounded-full p-3.5 bg-violet-600 text-white shadow-none hover:shadow-md hover:shadow-violet-300/50">Continue</button>
-        <button class="mt-7 text-violet-500/90 font-bold">No, bring me back</button>
+      <div class="flex flex-col justify-center w-4/5 text-center">
+        <a th:href="|/search/video?channelId=${profile.channelId}|" class="rounded-full p-3.5 bg-violet-600 text-white shadow-none hover:shadow-md hover:shadow-violet-300/50">Continue</a>
+        <a href="/" class="mt-7 text-violet-500/90 font-bold">No, bring me back</a>
       </div>
     </div>
   </div>
