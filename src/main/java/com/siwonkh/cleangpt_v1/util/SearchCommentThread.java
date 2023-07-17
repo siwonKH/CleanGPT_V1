@@ -9,7 +9,6 @@ import java.net.URL;
 import java.nio.charset.StandardCharsets;
 
 public class SearchCommentThread {
-    private final String BASE_URL = "https://www.googleapis.com/youtube/v3/commentThreads";
     private final String APIKey;
     private String url;
 
@@ -18,10 +17,11 @@ public class SearchCommentThread {
     }
 
     public void setVideo(String video) {
+        String BASE_URL = "https://www.googleapis.com/youtube/v3/commentThreads";
         String urlStr = BASE_URL + "?part=snippet";
         urlStr += "&key=" + APIKey;
         urlStr += "&videoId=" + video;
-        urlStr += "&maxResults=" + "100";
+        urlStr += "&maxResults=" + "10";
         this.url = urlStr;
     }
 

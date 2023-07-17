@@ -5,20 +5,22 @@ public class CreatorProfile {
     private String description;
     private String url;
     private String channelId;
+    private String publishedAt;
 
-    public CreatorProfile(String title, String description, String url, String channelId) {
+    public CreatorProfile(String title, String description, String url, String channelId, String publishedAt) {
         this.title = title;
         this.description = description;
         this.url = url;
         this.channelId = channelId;
+        this.publishedAt = publishedAt;
+    }
+
+    public String getPublishedAt() {
+        return publishedAt;
     }
 
     public String getChannelId() {
         return channelId;
-    }
-
-    public void setChannelId(String channelId) {
-        this.channelId = channelId;
     }
 
     public String getTitle() {
@@ -31,10 +33,6 @@ public class CreatorProfile {
 
     public String getDescription() {
         return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
     }
 
     public String getUrl() {
